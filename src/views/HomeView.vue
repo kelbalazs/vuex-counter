@@ -9,7 +9,7 @@
 <div class="counter-squared">
   {{$store.state.counter}}
   <sup>2</sup> =
-  {{$store.getters.counterSquared}}
+  {{counterSquared}}
 </div>
 <div class="buttons">
   <button @click="$store.dispatch('decreaseCounter')">-</button>
@@ -35,7 +35,10 @@ export default {
       set(newValue){
         this.$store.dispatch('setColourCode', newValue)
       }
-    }
+    },
+    ...mapGetters([
+      'counterSquared'
+    ])
   }
 
 }

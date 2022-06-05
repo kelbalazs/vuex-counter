@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios'
+import { mapGetters } from 'vuex'
 
 export default createStore({
   state: {
